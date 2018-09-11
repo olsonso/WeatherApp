@@ -1,7 +1,19 @@
 import React, { Component } from 'react';
-import Header from './Components/Header/header.js'
-import MainContainer from './Components/MainContainer/mainContainer.js'
+import Header from './Components/header.js'
+import MainContainer from './Components/mainContainer.js';
+import styled from "styled-components";
+import media from "styled-media-query";
 import './Styles/App.css';
+
+const AppWrapper = styled.div`
+  text-align: center;
+  margin:10px;
+  width:100%;
+  ${media.lessThan("medium")`
+    /* screen width is less than 768px (medium) */
+    width:100%;
+  `}
+`;
 
 class App extends Component {
 
@@ -21,13 +33,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <AppWrapper>
         <Header/>
         <MainContainer/>
         <p>
           {this.state.message}
         </p>
-      </div>
+      </AppWrapper>
     );
   }
 }
