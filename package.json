@@ -1,5 +1,5 @@
 {
-  "name": "node-knockout-react-node-starter",
+  "name": "weather-app",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
